@@ -1,3 +1,6 @@
 FROM nginx
 COPY index.html /usr/share/nginx/html
-EXPOSE 80
+FROM ubuntu
+RUN apt-get update && apt-get install -y iputils-ping
+CMD bash
+EXPOSE 82
